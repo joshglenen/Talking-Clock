@@ -9,9 +9,15 @@ To customize:
         private void myTimer_Tick(object sender, EventArgs e)
         {
             int preSpeech = DateTime.Now.Hour + 1;
-            if (preSpeech == 0) myTray.ShowBalloonTip(10, "My Notification", "My message", ToolTipIcon.None);
-            timer.Interval = 24*MilliSecondsLeftTilTheHour(); 
             
+            if (preSpeech == 0) 
+            {
+            myTray.ShowBalloonTip(10, "My Notification", "My message", ToolTipIcon.None);
+            timer.Interval = 24*MilliSecondsLeftTilTheHour(); 
+            return;
+            }
+            
+            timer.Interval = MilliSecondsLeftTilTheHour(); 
             //Note, timer.interval should not normally exceed one day. Max is ~ 24 days.
         } 
         
