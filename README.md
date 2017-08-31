@@ -2,6 +2,7 @@
 C# application using OneClick Installer
 
 Install (Windows only): download as zip, extract, run setup, delete zip and extracted folder
+
 Uninstall: uninstall using control panel
 
 To customize:
